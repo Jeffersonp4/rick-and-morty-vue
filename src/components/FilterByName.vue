@@ -15,8 +15,9 @@ import { useStore } from "vuex";
 
 export default {
   setup() {
-    const store = useStore;
+    const store = useStore();
     const name = ref("");
+
     const filter = () => {
       store.dispatch("FilterByName", name.value);
     };

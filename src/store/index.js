@@ -47,10 +47,10 @@ export default createStore({
   
     },
     FilterByName({commit,state}, name){
-      const formatName = name.TolowerCase()
+      const formatName = name.toLowerCase()
 
       const results = state.characters.filter((character)=> {
-        const characterName = character.name.TolowerCase()
+        const characterName = character.name.toLowerCase()
 
         if(characterName.includes(formatName)){
           return character
